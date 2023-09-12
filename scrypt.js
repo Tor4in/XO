@@ -10,7 +10,7 @@ const diadonale2 = document.querySelectorAll(".diadonale2");
 
 let playerX = true;
 let win = false;
-
+ 
 let winCheck = (name) => {
   if (
     name[0].innerHTML == name[1].innerHTML &&

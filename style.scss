@@ -1,0 +1,139 @@
+body{
+    background-color: #e1a0a0;
+    margin: 0;
+    padding: 0;
+}
+.wraper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .game_screen {
+        @media screen and (max-width: 1300px) {
+            width: 40%;
+        }
+        @media screen and (max-width: 1000px) {
+            width: 50%;
+        }
+        @media screen and (max-width: 800px) {
+            width: 65%;
+        }
+        @media screen and (max-width: 600px) {
+            width: 80%;
+        }
+        width: 30%;
+        
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        aspect-ratio: 1/1;
+
+
+        .move {
+
+
+            background-color: #bbb;
+            border: 1px solid black;
+            opacity: 0.5;
+            position: relative;
+            p{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: white;
+                font-size: 3em;
+                text-align: center;
+                // line-height: 1;
+                margin: 0;
+            }
+            &:hover{
+                opacity: 1;
+            }
+        }
+    }
+}
+.X {
+    position: relative;
+    transition: transform ease-out 0.7s;
+    &::before {
+        content: '';
+        position: absolute;
+        width: 20%;
+        aspect-ratio: 1/1;
+        top: 50%;
+        left: 50%;
+        border-radius: 50px;
+        transform: translate(-50%, -50%) rotate(-45deg);
+        background-color: #fff;
+        animation: animX ease 0.7s both;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 20%;
+        aspect-ratio: 1/1;
+        top: 50%;
+        left: 50%;
+        border-radius: 50px;
+        transform: translate(-50%, -50%) rotate(45deg);
+        background-color: #fff;
+        animation: animX ease 0.7s both;
+        
+    }
+    @keyframes animX {
+        0%{
+    
+            aspect-ratio: 1/1;
+        }
+        100%{
+    
+            aspect-ratio: 2/10;
+        }
+    }
+}
+.O {
+    position: relative;
+    transition: transform ease-out 0.7s;
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: 2;
+        width: 40%;
+        aspect-ratio: 1/1;
+        top: 50%;
+        left: 50%;
+        border-radius: 50px;
+        transform: translate(-50%, -50%);
+        background-color: #bbb;
+
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        width: 35%;
+        aspect-ratio: 1/1;
+        top: 50%;
+        left: 50%;
+        border-radius: 50px;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        animation: animO ease 0.7s both;
+        
+    }
+    @keyframes animO {
+        0%{
+            transform: translate(-50%, -50%);
+        }
+        100%{
+            transform: translate(-50%, -50%) scale(2.4);
+        }
+    }
+}

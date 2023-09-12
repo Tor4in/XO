@@ -1,3 +1,6 @@
+*{
+    line-height: 1;
+}
 body{
     background-color: #e1a0a0;
     margin: 0;
@@ -9,8 +12,9 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-
+    
     .game_screen {
+        
         @media screen and (max-width: 1300px) {
             width: 40%;
         }
@@ -24,7 +28,7 @@ body{
             width: 80%;
         }
         width: 30%;
-        
+        position: relative;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(3, 1fr);
@@ -36,7 +40,7 @@ body{
         .move {
 
 
-            background-color: #bbb;
+            background-color: #c0a5a5;
             border: 1px solid black;
             opacity: 0.5;
             position: relative;
@@ -55,8 +59,132 @@ body{
                 opacity: 1;
             }
         }
+        .reload{
+            border-radius: 15px;
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.3em;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            aspect-ratio: 2/1;
+            letter-spacing: 3px;
+            background-color: #fff;
+            position: absolute;
+            right: -75%;
+            top: 37%;
+            // transform: translate();
+        }
+        .final{
+            transition: all ease-in 0.4s;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            aspect-ratio: 1/1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            &.win{
+                z-index: 3;
+                animation: show 0.4s ease both;
+            }
+            @keyframes show {
+                0%{
+                    background-color: none-;
+                    opacity: 1;
+                }
+                100%{
+                    background-color: #8a4040;
+                    opacity: 0.8;
+                }
+            }
+            &.row1Show{
+                &::before{
+                    content: '';
+                    width: 16.5%;
+                    aspect-ratio: 1/5;
+                    transform: translateX(-150%);
+                    background-color: #fff;
+                    border-radius: 50px;
+                }
+                &::after{
+                    content: '';
+                    width: 20%;
+                    aspect-ratio: 1/5;
+                    transform: translateX(-212.5%);
+                    background-color: #8a4040;
+                    border-radius: 50px;
+                    animation: row1Show 0.8s ease both 0.4s;
+                }
+                @keyframes row1Show {
+                    0%{
+                        transform: translate(-212.5%, 0);
+                    }
+                    100%{
+                        transform: translate(-212.5%, 100%);
+                    }
+                }
+            }
+            &.row2Show{
+                &::before{
+                    content: '';
+                    width: 16.5%;
+                    aspect-ratio: 1/5;
+                    transform: translateX(50%);
+                    background-color: #fff;
+                    border-radius: 50px;
+                }
+                &::after{
+                    content: '';
+                    width: 20%;
+                    aspect-ratio: 1/5;
+                    transform: translateX(-50%);
+                    background-color: #8a4040;
+                    border-radius: 50px;
+                    animation: row2Show 0.8s ease both 0.4s;
+                }
+                @keyframes row2Show {
+                    0%{
+                        transform: translate(-50%, 0);
+                    }
+                    100%{
+                        transform: translate(-50%, 100%);
+                    }
+                }
+            }
+            &.row3Show{
+                &::before{
+                    content: '';
+                    width: 16.5%;
+                    aspect-ratio: 1/5;
+                    transform: translateX(250%);
+                    background-color: #fff;
+                    border-radius: 50px;
+                }
+                &::after{
+                    content: '';
+                    width: 20%;
+                    aspect-ratio: 1/5;
+                    transform: translateX(117.5%);
+                    background-color: #8a4040;
+                    border-radius: 50px;
+                    animation: row3Show 0.8s ease both 0.4s;
+                }
+                @keyframes row3Show {
+                    0%{
+                        transform: translate(117.5%, 0);
+                    }
+                    100%{
+                        transform: translate(117.5%, 100%);
+                    }
+                }
+            }
+        }
     }
-}
+    
+}   
 .X {
     position: relative;
     transition: transform ease-out 0.7s;

@@ -178,121 +178,196 @@ body {
 .wraper .game_screen .final.row1Show::before {
   content: "";
   width: 16.5%;
-  aspect-ratio: 1/5;
-  -webkit-transform: translateX(-150%);
-          transform: translateX(-150%);
+  aspect-ratio: 1/1;
+  -webkit-transform: translateX(-200%);
+          transform: translateX(-200%);
   background-color: #fff;
   border-radius: 50px;
-}
-.wraper .game_screen .final.row1Show::after {
-  content: "";
-  width: 20%;
-  aspect-ratio: 1/5;
-  -webkit-transform: translateX(-212.5%);
-          transform: translateX(-212.5%);
-  background-color: #8a4040;
-  border-radius: 50px;
-  -webkit-animation: row1Show 0.8s ease both 0.4s;
-          animation: row1Show 0.8s ease both 0.4s;
+  -webkit-animation: row1Show 0.8s ease both 0.1s;
+          animation: row1Show 0.8s ease both 0.1s;
 }
 @-webkit-keyframes row1Show {
   0% {
-    -webkit-transform: translate(-212.5%, 0);
-            transform: translate(-212.5%, 0);
+    aspect-ratio: 1/1;
   }
   100% {
-    -webkit-transform: translate(-212.5%, 100%);
-            transform: translate(-212.5%, 100%);
+    aspect-ratio: 1/5;
   }
 }
 @keyframes row1Show {
   0% {
-    -webkit-transform: translate(-212.5%, 0);
-            transform: translate(-212.5%, 0);
+    aspect-ratio: 1/1;
   }
   100% {
-    -webkit-transform: translate(-212.5%, 100%);
-            transform: translate(-212.5%, 100%);
+    aspect-ratio: 1/5;
   }
 }
 .wraper .game_screen .final.row2Show::before {
   content: "";
   width: 16.5%;
   aspect-ratio: 1/5;
-  -webkit-transform: translateX(50%);
-          transform: translateX(50%);
   background-color: #fff;
   border-radius: 50px;
-}
-.wraper .game_screen .final.row2Show::after {
-  content: "";
-  width: 20%;
-  aspect-ratio: 1/5;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  background-color: #8a4040;
-  border-radius: 50px;
-  -webkit-animation: row2Show 0.8s ease both 0.4s;
-          animation: row2Show 0.8s ease both 0.4s;
+  -webkit-animation: row2Show 0.8s ease both 0.1s;
+          animation: row2Show 0.8s ease both 0.1s;
 }
 @-webkit-keyframes row2Show {
   0% {
-    -webkit-transform: translate(-50%, 0);
-            transform: translate(-50%, 0);
+    aspect-ratio: 1/1;
   }
   100% {
-    -webkit-transform: translate(-50%, 100%);
-            transform: translate(-50%, 100%);
+    aspect-ratio: 1/5;
   }
 }
 @keyframes row2Show {
   0% {
-    -webkit-transform: translate(-50%, 0);
-            transform: translate(-50%, 0);
+    aspect-ratio: 1/1;
   }
   100% {
-    -webkit-transform: translate(-50%, 100%);
-            transform: translate(-50%, 100%);
+    aspect-ratio: 1/5;
   }
 }
 .wraper .game_screen .final.row3Show::before {
   content: "";
   width: 16.5%;
-  aspect-ratio: 1/5;
-  -webkit-transform: translateX(250%);
-          transform: translateX(250%);
+  -webkit-animation: row3Show 0.8s ease both 0.1s;
+          animation: row3Show 0.8s ease both 0.1s;
+  -webkit-transform: translateX(200%);
+          transform: translateX(200%);
   background-color: #fff;
   border-radius: 50px;
 }
-.wraper .game_screen .final.row3Show::after {
-  content: "";
-  width: 20%;
-  aspect-ratio: 1/5;
-  -webkit-transform: translateX(117.5%);
-          transform: translateX(117.5%);
-  background-color: #8a4040;
-  border-radius: 50px;
-  -webkit-animation: row3Show 0.8s ease both 0.4s;
-          animation: row3Show 0.8s ease both 0.4s;
-}
 @-webkit-keyframes row3Show {
   0% {
-    -webkit-transform: translate(117.5%, 0);
-            transform: translate(117.5%, 0);
+    aspect-ratio: 1/1;
   }
   100% {
-    -webkit-transform: translate(117.5%, 100%);
-            transform: translate(117.5%, 100%);
+    aspect-ratio: 1/5;
   }
 }
 @keyframes row3Show {
   0% {
-    -webkit-transform: translate(117.5%, 0);
-            transform: translate(117.5%, 0);
+    aspect-ratio: 1/1;
   }
   100% {
-    -webkit-transform: translate(117.5%, 100%);
-            transform: translate(117.5%, 100%);
+    aspect-ratio: 1/5;
+  }
+}
+.wraper .game_screen .final.line1Show::before {
+  content: "";
+  height: 16.5%;
+  aspect-ratio: 1/1;
+  -webkit-transform: translateY(-200%);
+          transform: translateY(-200%);
+  background-color: #fff;
+  border-radius: 50px;
+  -webkit-animation: line1Show 0.8s ease both 0.1s;
+          animation: line1Show 0.8s ease both 0.1s;
+}
+@-webkit-keyframes line1Show {
+  0% {
+    aspect-ratio: 1/1;
+  }
+  100% {
+    aspect-ratio: 5/1;
+  }
+}
+@keyframes line1Show {
+  0% {
+    aspect-ratio: 1/1;
+  }
+  100% {
+    aspect-ratio: 5/1;
+  }
+}
+.wraper .game_screen .final.line2Show::before {
+  content: "";
+  height: 16.5%;
+  aspect-ratio: 1/1;
+  background-color: #fff;
+  border-radius: 50px;
+  -webkit-animation: line2Show 0.8s ease both 0.1s;
+          animation: line2Show 0.8s ease both 0.1s;
+}
+@-webkit-keyframes line2Show {
+  0% {
+    aspect-ratio: 1/1;
+  }
+  100% {
+    aspect-ratio: 5/1;
+  }
+}
+@keyframes line2Show {
+  0% {
+    aspect-ratio: 1/1;
+  }
+  100% {
+    aspect-ratio: 5/1;
+  }
+}
+.wraper .game_screen .final.line3Show::before {
+  content: "";
+  height: 16.5%;
+  aspect-ratio: 1/1;
+  -webkit-transform: translateY(200%);
+          transform: translateY(200%);
+  background-color: #fff;
+  border-radius: 50px;
+  -webkit-animation: line3Show 0.8s ease both 0.1s;
+          animation: line3Show 0.8s ease both 0.1s;
+}
+@-webkit-keyframes line3Show {
+  0% {
+    aspect-ratio: 1/1;
+  }
+  100% {
+    aspect-ratio: 5/1;
+  }
+}
+@keyframes line3Show {
+  0% {
+    aspect-ratio: 1/1;
+  }
+  100% {
+    aspect-ratio: 5/1;
+  }
+}
+.wraper .game_screen .final.diadonale1Show::before {
+  content: "";
+  width: 16.5%;
+  aspect-ratio: 1/1;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  background-color: #fff;
+  border-radius: 50px;
+  -webkit-animation: diadonaleShow 0.8s ease both 0.1s;
+          animation: diadonaleShow 0.8s ease both 0.1s;
+}
+.wraper .game_screen .final.diadonale2Show::before {
+  content: "";
+  width: 16.5%;
+  aspect-ratio: 1/1;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  background-color: #fff;
+  border-radius: 50px;
+  -webkit-animation: diadonaleShow 0.8s ease both 0.1s;
+          animation: diadonaleShow 0.8s ease both 0.1s;
+}
+@-webkit-keyframes diadonaleShow {
+  0% {
+    aspect-ratio: 1/1;
+  }
+  100% {
+    aspect-ratio: 2/13;
+  }
+}
+@keyframes diadonaleShow {
+  0% {
+    aspect-ratio: 1/1;
+  }
+  100% {
+    aspect-ratio: 2/13;
   }
 }
 

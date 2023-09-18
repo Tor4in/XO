@@ -8,7 +8,7 @@ const line3 = document.querySelectorAll(".line3");
 const diadonale1 = document.querySelectorAll(".diadonale1");
 const diadonale2 = document.querySelectorAll(".diadonale2");
 
-let playerX = true;
+let playerX = false;
 let final = document.querySelector(".final");
 
 let winCheck = (name) => {
@@ -22,7 +22,7 @@ let winCheck = (name) => {
       name[2].classList.contains("X")
     ) {
       final.classList.add("win");
-      playerX = true;
+      playerX = false;
       return true;
     } else if (
       name[0].classList.contains("O") &&
@@ -30,7 +30,7 @@ let winCheck = (name) => {
       name[2].classList.contains("O")
     ) {
       final.classList.add("win");
-      playerX = true;
+      playerX = false;
       return true;
     }
   }
@@ -111,7 +111,7 @@ reload.addEventListener("click", () => {
         m.classList.remove("O");
       }
     }
-    playerX = true;
+    playerX = false;
     final.classList = "final";
   }
 });

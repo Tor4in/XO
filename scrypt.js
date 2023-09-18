@@ -7,10 +7,14 @@ const line2 = document.querySelectorAll(".line2");
 const line3 = document.querySelectorAll(".line3");
 const diadonale1 = document.querySelectorAll(".diadonale1");
 const diadonale2 = document.querySelectorAll(".diadonale2");
+const infoWinCount = document.querySelector('.winCount')
 
-let playerX = false;
+let playerX = true;
 let final = document.querySelector(".final");
-
+let winCount = 0
+let info_print = ()=>{
+  infoWinCount.innerHTML = `Wins: ${winCount}`
+}
 let winCheck = (name) => {
   if (
     name[0].innerHTML == name[1].innerHTML &&
@@ -22,7 +26,8 @@ let winCheck = (name) => {
       name[2].classList.contains("X")
     ) {
       final.classList.add("win");
-      playerX = false;
+      playerX = true;
+
       return true;
     } else if (
       name[0].classList.contains("O") &&
@@ -30,7 +35,8 @@ let winCheck = (name) => {
       name[2].classList.contains("O")
     ) {
       final.classList.add("win");
-      playerX = false;
+      playerX = true;
+
       return true;
     }
   }
@@ -38,12 +44,14 @@ let winCheck = (name) => {
 
 for (const m of move) {
   m.addEventListener("click", () => {
+    
     if (!m.classList.contains("active") && !final.classList.contains("win")) {
       if (playerX) {
         m.classList.add("X");
       } else {
         m.classList.add("O");
       }
+      
 
       playerX = !playerX;
       m.classList.add("active");
@@ -59,49 +67,60 @@ for (const m of move) {
       if (winCheck(row1)) {
         setTimeout(() => {
           final.classList.add("row1Show");
+          winCount++
         }, 400);
       }
       if (winCheck(row2)) {
         setTimeout(() => {
           final.classList.add("row2Show");
+          winCount++
         }, 400);
       }
       if (winCheck(row3)) {
         setTimeout(() => {
           final.classList.add("row3Show");
+          winCount++
         }, 400);
       }
       if (winCheck(line1)) {
         setTimeout(() => {
           final.classList.add("line1Show");
+          winCount++
         }, 400);
       }
       if (winCheck(line2)) {
         setTimeout(() => {
           final.classList.add("line2Show");
+          winCount++
         }, 400);
       }
       if (winCheck(line3)) {
         setTimeout(() => {
           final.classList.add("line3Show");
+          winCount++
         }, 400);
       }
       if (winCheck(diadonale1)) {
         setTimeout(() => {
           final.classList.add("diadonale1Show");
+          winCount++
         }, 400);
       }
       if (winCheck(diadonale2)) {
         setTimeout(() => {
           final.classList.add("diadonale2Show");
+          winCount++
         }, 400);
       }
+      
     }
+    
   });
 }
 let reload = document.querySelector(".reload");
 
 reload.addEventListener("click", () => {
+  info_print()
   for (const m of move) {
     if (m.classList.contains("active")) {
       m.classList.remove("active");
@@ -111,7 +130,7 @@ reload.addEventListener("click", () => {
         m.classList.remove("O");
       }
     }
-    playerX = false;
+    playerX = true;
     final.classList = "final";
   }
 });

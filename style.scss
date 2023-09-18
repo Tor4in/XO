@@ -67,7 +67,19 @@ body {
                 opacity: 1;
             }
         }
-
+        .info_screen{
+            position: absolute;
+            top: 25%;
+            left: -75%;
+            width: 50%;
+            aspect-ratio: 1/1;
+            font-size: 1.3em;
+            letter-spacing: 4px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
         .reload {
             border-radius: 15px;
             width: 50%;
@@ -82,7 +94,7 @@ body {
             position: absolute;
             right: -75%;
             top: 37%;
-            // transform: translate();
+
         }
 
         .final {

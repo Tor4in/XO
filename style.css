@@ -110,6 +110,25 @@ body {
 .wraper .game_screen .move:hover {
   opacity: 1;
 }
+.wraper .game_screen .info_screen {
+  position: absolute;
+  top: 25%;
+  left: -75%;
+  width: 50%;
+  aspect-ratio: 1/1;
+  font-size: 1.3em;
+  letter-spacing: 4px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 .wraper .game_screen .reload {
   border-radius: 15px;
   width: 50%;
